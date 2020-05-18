@@ -3,9 +3,10 @@ def count_strings(array)
     element.is_a? String
   end
 end
-
+require 'pry'
 def count_empty_strings(array)
   array.count do |element|
-    element.class == String && element.length == 0
+  binding.pry
+    element.class == String && element.empty?
   end
 end
